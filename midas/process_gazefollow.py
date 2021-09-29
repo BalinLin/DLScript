@@ -23,7 +23,6 @@ elif mode == "train":
 save_dir += "_" + str(channel)
 save_dir += "_with_norm" if normalize else "_without_norm"
 
-
 os.mkdir(save_dir)
 
 # load model
@@ -45,10 +44,6 @@ if model_type == "DPT_Large" or model_type == "DPT_Hybrid":
     transform = midas_transforms.dpt_transform
 else:
     transform = midas_transforms.small_transform
-
-
-all_max = 0
-all_min = float('inf')
 
 for foldername in os.listdir(load_dir):
     print("foldername: ", foldername)
