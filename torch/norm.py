@@ -11,13 +11,11 @@ import torchvision.models as models
 
 
 if __name__ == "__main__":
-    a = torch.randn(2,3,4)
+    a = torch.randn(10,3)
     print(a)
-    b = torch.randn(2,3,4)
+    b = torch.randn(10,3)
     print(b)
     c = a + b
     print(c)
-    c = c + 1
-    print(c)
-    d = a * b
-    print(d)
+    norm = torch.norm(c[:, :2], 2, dim=1)
+    print(norm)
