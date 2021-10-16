@@ -11,11 +11,18 @@ import torchvision.models as models
 
 
 if __name__ == "__main__":
-    loss = torch.nn.L1Loss(reduction='mean')
+    L1_loss = torch.nn.L1Loss(reduction='mean')
+    L2_loss = torch.nn.MSELoss()
     input = torch.randn(3, 1, requires_grad=True)
     target = torch.randn(3, 1)
-    output = loss(input, target)
+    output = L1_loss(input, target)
     print(input)
     print(target)
+    print("L1")
+    print(output)
+    output.backward()
+
+    output = L2_loss(input, target)
+    print("L2")
     print(output)
     output.backward()
