@@ -23,10 +23,10 @@ minHW = 112
 # path
 home = os.path.expanduser("~")
 load_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/videoatttarget/images")
-save_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/videoatttarget/images_sal")
+save_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/videoatttarget/images_sal_PoolNet")
 if dockerPath:
     load_dir = "/exper/gaze/attention-target-detection/data/videoatttarget/images"
-    save_dir = "/exper/gaze/attention-target-detection/data/videoatttarget/images_sal"
+    save_dir = "/exper/gaze/attention-target-detection/data/videoatttarget/images_sal_PoolNet"
 
 
 if not os.path.exists(save_dir):

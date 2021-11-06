@@ -26,16 +26,16 @@ minHW = 112
 home = os.path.expanduser("~")
 if mode == "test":
     load_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/gazefollow/test2")
-    save_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/gazefollow/test2_sal")
+    save_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/gazefollow/test2_sal_PoolNet")
     if dockerPath:
         load_dir = "/exper/gaze/attention-target-detection/data/gazefollow/test2"
-        save_dir = "/exper/gaze/attention-target-detection/data/gazefollow/test2_sal"
+        save_dir = "/exper/gaze/attention-target-detection/data/gazefollow/test2_sal_PoolNet"
 elif mode == "train":
     load_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/gazefollow/train")
-    save_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/gazefollow/train_sal")
+    save_dir = os.path.join(home, "exper/gaze/attention-target-detection/data/gazefollow/train_sal_PoolNet")
     if dockerPath:
         load_dir = "/exper/gaze/attention-target-detection/data/gazefollow/train"
-        save_dir = "/exper/gaze/attention-target-detection/data/gazefollow/train_sal"
+        save_dir = "/exper/gaze/attention-target-detection/data/gazefollow/train_sal_PoolNet"
 
 if not os.path.exists(save_dir):
     os.mkdir(save_dir)
