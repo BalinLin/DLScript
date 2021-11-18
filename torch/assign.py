@@ -28,6 +28,14 @@ if __name__ == "__main__":
     print("input2:")
     print(input2)
     idx = input2 > 0
+    print("idx:")
+    print(idx)
     input2[idx] = 1
+    print("input2:")
+    print(input2)
+    idx = ~idx
+    print("idx:")
+    print(idx)
+    input2[idx] = -2
     print("input2:")
     print(input2)
